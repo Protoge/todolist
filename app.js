@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(express.static("public"));
-mongoose.connect(process.env.DB_ATLAS, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true
 }, () => {
   console.log('connection db successfull')
