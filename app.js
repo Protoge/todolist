@@ -54,7 +54,7 @@ app.get("/", function (req, res) {
   const minute = date.getMinutes();
 
 
-  if (hours === 0 && minute < 1 && seconds === 1) {
+  if (hours === 0 && minute === 0 && seconds === 0) {
     Item.deleteMany({})
       .then(() => console.log('deleted'))
   }
